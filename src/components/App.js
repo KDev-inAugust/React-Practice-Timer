@@ -4,11 +4,14 @@ import { render } from 'react-dom';
 import '../App.css';
 import IntervalDataInput from './IntervalDataForm';
 import IntervalList from './IntervalList';
+import Transport from './Transport';
+import Timer from './Timer';
+
+
 
 
 function App() {
 
-  //-------create the timer-------
 
   const [intervalData, setIntervalData] =useState([])
   const [seconds, setSeconds] = useState(0);
@@ -23,6 +26,7 @@ useEffect(()=>{
 },[])
 
   useEffect(  () => {
+    //--------timer base functionality--------
     const timer = () => {
         setSeconds(seconds + 1);
     }
@@ -41,36 +45,7 @@ useEffect(()=>{
   [seconds, pause]
   );
 
-
-  function Transport (){
-    function handlePauseCLick(){
-      setPause(!pause); 
-    }
-    function handleResetClick(){
-      setPause(true);
-      setMinutes(0);
-      setSeconds(0);
-      setIntervalStart(new Date().toLocaleTimeString())
-    }
-    function handleStart(){
-      setPause(false);
-      setIntervalStart(new Date().toLocaleTimeString())
-    }
-    return (
-      <div>
-        <button onClick={handleStart}>  Start</button>
-        <button onClick={handlePauseCLick}>Pause/Resume</button>
-        <button onClick={handleResetClick}>Reset</button>
-        <br></br>
-       
-      </div>
-    )
-  }
-
-
   //---------time stamp info-----------
-
-
     let day = new Date().getDate()
     let month = new Date().getMonth();
     let year = new Date().getFullYear();
@@ -81,10 +56,10 @@ useEffect(()=>{
     <div className="App">
       {'current interval duration:'}
       <br></br>
-        {`${minutes}:${seconds} on:  ${month}/ ${day}/ ${year} at:${intervalStart}`}
+      <Timer minutes={minutes} seconds={seconds} month={month} day={day} year={year} intervalStart={intervalStart}/>
       <IntervalDataInput />
       <br></br>
-      <Transport />
+      <Transport pause={pause} setPause={setPause} setMinutes={setMinutes} setSeconds={setSeconds} setIntervalStart={setIntervalStart}/>
       <IntervalList intervalData={intervalData}/>
     </div>
   );
