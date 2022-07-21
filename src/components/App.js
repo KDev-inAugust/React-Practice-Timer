@@ -14,6 +14,7 @@ function App() {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [pause, setPause] = useState(false);
+  const [intervalStart, setIntervalStart] = useState(new Date().toLocaleTimeString())
 
 
   function Transport (){
@@ -24,24 +25,36 @@ function App() {
       setPause(true);
       setMinutes(0);
       setSeconds(0);
+      setIntervalStart(new Date().toLocaleTimeString())
     }
     function handleStart(){
-      setPause(false)
+      setPause(false);
+      setIntervalStart(new Date().toLocaleTimeString())
     }
     return (
       <div>
         <button onClick={handleStart}>  Start</button>
-        <button onClick={handlePauseCLick}>Pause</button>
+        <button onClick={handlePauseCLick}>Pause/Stop</button>
         <button onClick={handleResetClick}>Reset</button>
+        <br></br>
+        <button>Log Interval</button>
       </div>
     )
   }
+
+  //---------time stamp info-----------
+
+
+    let day = new Date().getDate()
+    let month = new Date().getMonth();
+    let year = new Date().getFullYear();
+    
   
   
  useEffect(  () => {
   const timer = () => {
       setSeconds(seconds + 1);
-      //console.log('seconds incremented')
+     
   }
   // set the seconds to minutes turnover
   if (seconds === 60) {
@@ -58,11 +71,11 @@ function App() {
 [seconds, pause]
 );
 
-//console.log('outsideeffect')
-
   return (
     <div className="App">
-      {`${minutes}:${seconds}`}
+      {'current interval duration:'}
+      <br></br>
+        {`${minutes}:${seconds} on:  ${month}/ ${day}/ ${year} at:${intervalStart}`}
       <Transport />
     </div>
   );
