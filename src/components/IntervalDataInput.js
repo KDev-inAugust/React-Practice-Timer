@@ -3,8 +3,8 @@ import React, {useState} from "react";
 
 //-------------Interval Data Component--------
 
-function IntervalDataInput (){
-const [intervalName, setIntervalName]=useState("")
+function IntervalDataInput ({setIntervalName, handleLogSession}){
+
 
   function handleSubmit(e){
     e.preventDefault();
@@ -15,7 +15,7 @@ const [intervalName, setIntervalName]=useState("")
   }
 
   function handleLogClick(e){
-    console.log(intervalName)
+    handleLogSession()
   }
 
   return (

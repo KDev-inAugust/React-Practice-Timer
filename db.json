@@ -1,22 +1,28 @@
 {
-    "intervals":[
-        {
-            "id":0,
-            "name": "Test Session One",
-            "duration": "30:45",
-            "category": "Instrumental Practice"
-        },
-        {
-            "id":1,
-            "name": "Test Session Two",
-            "duration": "45:45",
-            "category": "Instrumental Practice"
-        },
-        {
-            "id":2,
-            "name": "Test Session Three",
-            "duration": "20:45",
-            "category": "Instrumental Practice"
-        }
-    ]
+  "intervals": [
+    {
+      "id": 0,
+      "name": "Test Session One",
+      "duration": "30:45",
+      "category": "Instrumental Practice"
+    },
+    {
+      "id": 1,
+      "name": "Test Session Two",
+      "duration": "45:45",
+      "category": "Instrumental Practice"
+    },
+    {
+      "id": 2,
+      "name": "Test Session Three",
+      "duration": "20:45",
+      "category": "Instrumental Practice"
+    },
+    {
+      "name": "test practice session",
+      "duration": "0: 7",
+      "category": "instrument practice",
+      "id": 3
+    }
+  ]
 }

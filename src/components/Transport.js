@@ -16,7 +16,8 @@ function Transport ({pause, setPause, setMinutes, setSeconds, setIntervalStart})
     }
     function handleStart(){
       setPause(false);
-      setIntervalStart(new Date().toLocaleTimeString())
+      pause===true ? setIntervalStart(new Date().toLocaleTimeString()) : console.log('no time reset')
+      
     }
     return (
       <div>
