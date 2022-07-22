@@ -23,6 +23,12 @@
       "duration": "0: 7",
       "category": "instrument practice",
       "id": 3
+    },
+    {
+      "name": "test practice session four",
+      "duration": "1: 51",
+      "category": "instrument practice",
+      "id": 4
     }
   ]
 }

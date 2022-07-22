@@ -71,7 +71,8 @@ useEffect(()=>{
 
   return (
     <div className="App">
-      {'current interval duration:'}
+      <h1>Practice Timer</h1>
+      <h2>current interval</h2>
       <br></br>
       <Timer minutes={minutes} seconds={seconds} month={month} day={day} year={year} intervalStart={intervalStart}/>
       <IntervalDataInput setIntervalName={setIntervalName} handleLogSession={handleLogSession}/>
