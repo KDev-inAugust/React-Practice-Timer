@@ -20,9 +20,9 @@ function Transport ({pause, setPause, setMinutes, setSeconds, setIntervalStart})
       
     }
     return (
-      <div>
+      <div className="transport">
         <button onClick={handleStart}>  Start</button>
-        <button onClick={handlePauseCLick}>Pause/Resume</button>
+        <button onClick={handlePauseCLick} className={pause===true? 'paused' : 'running'}>{pause === true ? 'Resume': 'Pause'}</button>
         <button onClick={handleResetClick}>Reset</button>
         <br></br>
        

@@ -18,6 +18,37 @@ body {
   }
 }
 
+.transport {
+  margin: auto;
+  background-color: rgb(55, 144, 245);
+  width: 80%;
+  border-style: double;
+  border-radius: 10px;
+  border-width: 5px;
+  padding: 10px;
+}
+.container {
+  margin: auto;
+  width: 80%;
+  background-color: rgb(137, 182, 200);
+  background-blend-mode: hard-light;
+  border-style: double;
+  border-radius: 10px;
+  border-width: 5px;
+  padding: 10px;
+}
+
+.paused{
+  font-size: x-large;
+  border-radius: 50px;
+  box-shadow: 30px;
+  padding: 30px;
+  background-color: rgb(205, 197, 104);
+}
+
+.running {
+  font-weight: 100;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

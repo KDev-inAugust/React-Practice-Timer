@@ -5,6 +5,7 @@ import '../App.css';
 import IntervalDataInput from './IntervalDataInput';
 import IntervalList from './IntervalList';
 import Transport from './Transport';
+import Settings from './settings';
 import Timer from './Timer';
 
 
@@ -18,6 +19,7 @@ function App() {
   const [pause, setPause] = useState(true);
   const [intervalStart, setIntervalStart] = useState(new Date().toLocaleTimeString());
   const [intervalName, setIntervalName]=useState("");
+  const [intervalType, setIntervalType] = useState("");
   const [lastPost, setLastPost]=useState([])
   
 useEffect(()=>{
@@ -61,7 +63,7 @@ useEffect(()=>{
       body: JSON.stringify({
         name: intervalName,
         duration: `${minutes}: ${seconds}`,
-        category: 'instrument practice'
+        category: `${intervalType}`
       })
     }
     ).then(res=>res.json())
@@ -75,10 +77,11 @@ useEffect(()=>{
       <h2>current interval</h2>
       <br></br>
       <Timer minutes={minutes} seconds={seconds} month={month} day={day} year={year} intervalStart={intervalStart}/>
-      <IntervalDataInput setIntervalName={setIntervalName} handleLogSession={handleLogSession}/>
+      <IntervalDataInput setIntervalName={setIntervalName} setIntervalType={setIntervalType} handleLogSession={handleLogSession}/>
       <br></br>
       <Transport pause={pause} setPause={setPause} setMinutes={setMinutes} setSeconds={setSeconds} setIntervalStart={setIntervalStart}/>
       <IntervalList intervalData={intervalData}/>
+      <Settings />
     </div>
   );
 }
