@@ -14,15 +14,13 @@ function Transport ({pause, setPause, setMinutes, setSeconds, setIntervalStart})
       setSeconds(0);
       setIntervalStart(new Date().toLocaleTimeString())
     }
-    function handleStart(){
-      setPause(false);
-      pause===true ? setIntervalStart(new Date().toLocaleTimeString()) : console.log('no time reset')
-      
-    }
+   
+
+    let pauseButtonClass=pause===true? 'paused' : 'running';
+
     return (
       <div className="transport">
-        <button onClick={handleStart}>  Start</button>
-        <button onClick={handlePauseCLick} className={pause===true? 'paused' : 'running'}>{pause === true ? 'Resume': 'Pause'}</button>
+        <button onClick={handlePauseCLick} className={pauseButtonClass}>{pause === true ? 'Start': 'Pause'}</button>
         <button onClick={handleResetClick}>Reset</button>
         <br></br>
        

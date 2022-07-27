@@ -11,6 +11,30 @@
       "duration": "0: 36",
       "category": "composition",
       "id": 2
+    },
+    {
+      "name": "Test Interval Name",
+      "duration": "0: 10",
+      "category": "composition",
+      "id": 3
+    },
+    {
+      "name": "Test Interval Name",
+      "duration": "0: 20",
+      "category": "composition",
+      "id": 4
+    },
+    {
+      "name": "Test Interval Name",
+      "duration": "0: 0",
+      "category": "composition",
+      "id": 5
+    },
+    {
+      "name": "Test Interval Name five",
+      "duration": "0: 45",
+      "category": "instrument",
+      "id": 6
     }
   ]
 }

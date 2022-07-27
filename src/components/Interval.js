@@ -5,7 +5,14 @@ import React from "react";
 function Interval ({name, duration, category}){
     return(
         <div>
-            {`${name} ${duration} ${category}`} 
+            <ul>
+                <li className="interval">
+                {`${name} ${duration} ${category}`} 
+                <br></br>
+                <button>edit</button>
+                </li>
+            </ul>
+            
         </div>
     )
 }
