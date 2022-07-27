@@ -35,6 +35,23 @@
       "duration": "0: 45",
       "category": "instrument",
       "id": 6
+    },
+    {
+      "name": "Trying to Code this thing",
+      "duration": "2: 20",
+      "category": "composition",
+      "id": 7
+    },
+    {
+      "name": "Trying to Code this thing",
+      "duration": "10: 45",
+      "category": "composition",
+      "date": {
+        "day": "27",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 8
     }
   ]
 }

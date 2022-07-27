@@ -63,7 +63,12 @@ useEffect(()=>{
       body: JSON.stringify({
         name: intervalName,
         duration: `${minutes}: ${seconds}`,
-        category: `${intervalType}`
+        category: `${intervalType}`,
+        date: {
+          day:`${day}`,
+          month: `${month}`,
+          year: `${year}`
+      }
       })
     }
     ).then(res=>res.json())
