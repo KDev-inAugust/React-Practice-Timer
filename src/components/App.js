@@ -21,6 +21,8 @@ function App() {
   const [intervalName, setIntervalName]=useState("");
   const [intervalType, setIntervalType] = useState("");
   const [lastPost, setLastPost]=useState([])
+  const [newCategory, setNewCategory]=useState("")
+  const [categoryArray, setCategoryArray]=useState([]);
   
 useEffect(()=>{
   fetch("http://localhost:3000/intervals")
@@ -46,6 +48,13 @@ useEffect(()=>{
   },
   [seconds, pause]
   );
+//---------get categories-----------------
+useEffect(()=>{
+  fetch("http://localhost:3000/categories")
+  .then(res=>res.json())
+  .then(data=>setCategoryArray(data));
+},[])
+
 
   //---------time stamp info-----------
     let day = new Date().getDate()
@@ -75,6 +84,13 @@ useEffect(()=>{
     .then(data=>{setIntervalData([...intervalData], data); setLastPost(data)})
   }
 
+  
+
+  function handleAddCategory(newCategory){
+    setCategoryArray([...categoryArray, newCategory]);
+    console.log(newCategory);
+    console.log(categoryArray);
+  }
 
   return (
     <div className="App">
@@ -82,11 +98,11 @@ useEffect(()=>{
       <h2>current interval</h2>
       <br></br>
       <Timer minutes={minutes} seconds={seconds} month={month} day={day} year={year} intervalStart={intervalStart}/>
-      <IntervalDataInput setIntervalName={setIntervalName} setIntervalType={setIntervalType} handleLogSession={handleLogSession}/>
+      <IntervalDataInput setIntervalName={setIntervalName} setIntervalType={setIntervalType} handleLogSession={handleLogSession} categoryArray={categoryArray}/>
       <br></br>
       <Transport pause={pause} setPause={setPause} setMinutes={setMinutes} setSeconds={setSeconds} setIntervalStart={setIntervalStart}/>
       <IntervalList intervalData={intervalData}/>
-      <Settings />
+      <Settings handleAddCategory={handleAddCategory} newCategory={newCategory} setNewCategory={setNewCategory}/>
     </div>
   );
 }

@@ -76,6 +76,27 @@
         "year": "2022"
       },
       "id": 14
+    },
+    {
+      "name": "test the log again",
+      "duration": "0: 9",
+      "category": "Instrumental Practice",
+      "date": {
+        "day": "28",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 15
+    }
+  ],
+  "categories": [
+    {
+      "name": "Instrumental Practice",
+      "id": 1
+    },
+    {
+      "name": "Composition",
+      "id": 2
     }
   ]
 }

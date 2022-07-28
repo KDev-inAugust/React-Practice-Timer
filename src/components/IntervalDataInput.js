@@ -3,7 +3,7 @@ import React, {useState} from "react";
 
 //-------------Interval Data Component--------
 
-function IntervalDataInput ({setIntervalName, setIntervalType, handleLogSession}){
+function IntervalDataInput ({setIntervalName, setIntervalType, handleLogSession, categoryArray}){
 
 
   function handleSubmit(e){
@@ -28,8 +28,13 @@ function IntervalDataInput ({setIntervalName, setIntervalType, handleLogSession}
           <input onChange={handleIntDescripChange} type="text" placeholder="interval name"></input>
           <select onChange={handleSetIntervalType } >
                 <option>select interval type</option>
-                <option value="instrument">instrument</option>
-                <option value="composition">composition</option>
+                {categoryArray.map((index)=>{
+                  return(
+
+                    <option>{`${index.name}`}</option>
+                  )
+                  
+                })}
             </select>
           <button onClick={handleLogClick}>Log Interval</button>
 
