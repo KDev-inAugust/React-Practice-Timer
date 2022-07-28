@@ -120,6 +120,17 @@
         "year": "2022"
       },
       "id": 18
+    },
+    {
+      "name": "Testing client routing",
+      "duration": "0: 10",
+      "category": "coding",
+      "date": {
+        "day": "28",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 19
     }
   ],
   "categories": [
@@ -146,6 +157,10 @@
     {
       "name": "Sight Singing",
       "id": 6
+    },
+    {
+      "name": "coding",
+      "id": 7
     }
   ]
 }

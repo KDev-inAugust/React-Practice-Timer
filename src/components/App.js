@@ -112,9 +112,17 @@ useEffect(()=>{
       <br></br>
       <Transport pause={pause} setPause={setPause} setMinutes={setMinutes} setSeconds={setSeconds} setIntervalStart={setIntervalStart}/>
       
-      <NavBar></NavBar>
-      <IntervalList intervalData={intervalData}/>
-      <Settings handleAddCategory={handleAddCategory} newCategory={newCategory} setNewCategory={setNewCategory}/>
+      <NavBar />
+        <Switch>
+          <Route path="/intervalList">
+            <IntervalList intervalData={intervalData}/>
+          </Route>
+          <Route path="/settings">
+            <Settings handleAddCategory={handleAddCategory} newCategory={newCategory} setNewCategory={setNewCategory}/>
+          </Route>
+        </Switch>
+      
+      
     </div>
   );
 }
