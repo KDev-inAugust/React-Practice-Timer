@@ -1,7 +1,9 @@
 import { clear } from '@testing-library/user-event/dist/clear';
 import React, {useState, useEffect} from 'react';
+import { Route, Switch } from "react-router-dom";
 import { render } from 'react-dom';
 import '../App.css';
+import NavBar from './NavBar';
 import IntervalDataInput from './IntervalDataInput';
 import IntervalList from './IntervalList';
 import Transport from './Transport';
@@ -109,6 +111,8 @@ useEffect(()=>{
       <IntervalDataInput setIntervalName={setIntervalName} setIntervalType={setIntervalType} handleLogSession={handleLogSession} categoryArray={categoryArray}/>
       <br></br>
       <Transport pause={pause} setPause={setPause} setMinutes={setMinutes} setSeconds={setSeconds} setIntervalStart={setIntervalStart}/>
+      
+      <NavBar></NavBar>
       <IntervalList intervalData={intervalData}/>
       <Settings handleAddCategory={handleAddCategory} newCategory={newCategory} setNewCategory={setNewCategory}/>
     </div>
