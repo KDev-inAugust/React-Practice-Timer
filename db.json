@@ -1,48 +1,6 @@
 {
   "intervals": [
     {
-      "name": "Test Interval One",
-      "duration": "0: 13",
-      "category": "instrument",
-      "id": 1
-    },
-    {
-      "name": "Test Interval One",
-      "duration": "0: 36",
-      "category": "composition",
-      "id": 2
-    },
-    {
-      "name": "Test Interval Name",
-      "duration": "0: 10",
-      "category": "composition",
-      "id": 3
-    },
-    {
-      "name": "Test Interval Name",
-      "duration": "0: 20",
-      "category": "composition",
-      "id": 4
-    },
-    {
-      "name": "Test Interval Name",
-      "duration": "0: 0",
-      "category": "composition",
-      "id": 5
-    },
-    {
-      "name": "Test Interval Name five",
-      "duration": "0: 45",
-      "category": "instrument",
-      "id": 6
-    },
-    {
-      "name": "Trying to Code this thing",
-      "duration": "2: 20",
-      "category": "composition",
-      "id": 7
-    },
-    {
       "name": "Trying to Code this thing",
       "duration": "10: 45",
       "category": "composition",
@@ -52,6 +10,72 @@
         "year": "2022"
       },
       "id": 8
+    },
+    {
+      "name": "Trying to Code this thing",
+      "duration": "37: 56",
+      "category": "composition",
+      "date": {
+        "day": "27",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 9
+    },
+    {
+      "name": "covid test",
+      "duration": "17: 17",
+      "category": "instrument",
+      "date": {
+        "day": "28",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 10
+    },
+    {
+      "name": "Date test five",
+      "duration": "0: 2",
+      "category": "",
+      "date": {
+        "day": "28",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 11
+    },
+    {
+      "name": "Date test six",
+      "duration": "0: 10",
+      "category": "",
+      "date": {
+        "day": "28",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 12
+    },
+    {
+      "name": "Date Test Seven",
+      "duration": "5: 10",
+      "category": "",
+      "date": {
+        "day": "28",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 13
+    },
+    {
+      "name": "Date Test Seven",
+      "duration": "5: 10",
+      "category": "instrument",
+      "date": {
+        "day": "28",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 14
     }
   ]
 }
