@@ -87,9 +87,17 @@ useEffect(()=>{
   
 
   function handleAddCategory(newCategory){
-    setCategoryArray([...categoryArray, newCategory]);
-    console.log(newCategory);
-    console.log(categoryArray);
+    fetch("http://localhost:3000/categories",{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: newCategory
+      })
+    }
+    ).then(res=>res.json())
+    .then(data=>{setCategoryArray([...categoryArray, data])})
   }
 
   return (

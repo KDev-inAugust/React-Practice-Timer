@@ -87,6 +87,39 @@
         "year": "2022"
       },
       "id": 15
+    },
+    {
+      "name": "",
+      "duration": "0: 0",
+      "category": "Ear Training",
+      "date": {
+        "day": "28",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 16
+    },
+    {
+      "name": "",
+      "duration": "1: 4",
+      "category": "Solfege",
+      "date": {
+        "day": "28",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 17
+    },
+    {
+      "name": "",
+      "duration": "1: 4",
+      "category": "Sight Singing",
+      "date": {
+        "day": "28",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 18
     }
   ],
   "categories": [
@@ -97,6 +130,22 @@
     {
       "name": "Composition",
       "id": 2
+    },
+    {
+      "name": "scales practice",
+      "id": 3
+    },
+    {
+      "name": "Ear Training",
+      "id": 4
+    },
+    {
+      "name": "Solfege",
+      "id": 5
+    },
+    {
+      "name": "Sight Singing",
+      "id": 6
     }
   ]
 }
