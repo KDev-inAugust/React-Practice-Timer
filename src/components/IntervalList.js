@@ -7,8 +7,7 @@ function IntervalList ({intervalData}){
 
     return(
         <div className="container">
-            
-            <div >
+            <div>
             {intervalData.length===0 ? 'Loading': `Log Begin ${intervalData[0].date.day}/ ${intervalData[0].date.month}`}
             {intervalData.map((index, cur)=>{
             if (cur>0){cur=cur-1}

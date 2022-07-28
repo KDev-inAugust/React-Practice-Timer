@@ -18,6 +18,12 @@ body {
   }
 }
 
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+}
 .transport {
   margin: auto;
   width: 60%;
@@ -29,7 +35,11 @@ border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
   padding: 10px;
 }
+
+
 .container {
+  max-height: 400px;
+  overflow-y: scroll;
   width: 80%;
   margin: auto;
   padding: 10px;

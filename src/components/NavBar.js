@@ -6,20 +6,19 @@ import { NavLink } from "react-router-dom";
 function NavBar() {
   return (
   <div className="navbar">
-      <ul>
-        <li> 
+        <h3> 
         <NavLink
         to="/intervalList" >
           Interval List
         </NavLink>
-        </li>
-        <li> 
+        </h3>
+        <h3>{`<------->`}</h3>
+        <h3> 
         <NavLink
           to="/settings">
             Settings
         </NavLink>
-        </li>
-      </ul>
+        </h3>
   </div>
   );
 }

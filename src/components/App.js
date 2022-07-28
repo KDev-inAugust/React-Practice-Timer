@@ -118,7 +118,7 @@ useEffect(()=>{
             <IntervalList intervalData={intervalData}/>
           </Route>
           <Route path="/settings">
-            <Settings handleAddCategory={handleAddCategory} newCategory={newCategory} setNewCategory={setNewCategory}/>
+            <Settings handleAddCategory={handleAddCategory} newCategory={newCategory} setNewCategory={setNewCategory} categoryArray={categoryArray}/>
           </Route>
         </Switch>
       
