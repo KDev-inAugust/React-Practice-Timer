@@ -111,7 +111,6 @@ useEffect(()=>{
       <IntervalDataInput setIntervalName={setIntervalName} setIntervalType={setIntervalType} handleLogSession={handleLogSession} categoryArray={categoryArray}/>
       <br></br>
       <Transport pause={pause} setPause={setPause} setMinutes={setMinutes} setSeconds={setSeconds} setIntervalStart={setIntervalStart}/>
-      
       <NavBar />
         <Switch>
           <Route path="/intervalList">
