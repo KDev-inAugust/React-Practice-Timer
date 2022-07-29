@@ -65,8 +65,10 @@ function Interval ({id, name, duration, category, day, month, year, notes, detai
                 {`${name} ${duration} ${category}`}
                 <br></br>
                 {`loggged on: ${day}/${month}/${year}`}
-                <br></br>
+                <h4>notes:</h4>
+                <hr></hr>
                 <p>{notes}</p>
+                <br></br>
                 <button onClick={handleDetailsClick}>hide details</button>
                 <button onClick={setDescriptionChanges}>set changes</button>
                 <input onChange={handleDetailsInputChange} type='text'></input>
@@ -83,8 +85,10 @@ function Interval ({id, name, duration, category, day, month, year, notes, detai
                 {`${name} ${duration} ${category}`}
                 <br></br>
                 {`loggged on: ${day}/${month}/${year}`}
-                <br></br>
+                <h4>notes:</h4>
+                <hr></hr>
                 <p>{notes}</p>
+                <br></br>
                 <button onClick={handleDetailsClick}>hide details</button>
                 <button onClick={handleEditClick} >edit</button>
                 </li>
