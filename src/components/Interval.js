@@ -2,10 +2,10 @@ import React , {useState} from "react";
 
 
 
-function Interval ({name, duration, category, day, month, year}){
+function Interval ({id, name, duration, category, day, month, year, notes, details, setDetails, postDetails}){
 
     const [showDetails, setShowDetails] = useState(false)
-    const [details, setDetails] = useState("")
+    
     const [editState, setEditState] = useState(false);
 
     function handleDetailsClick(){
@@ -16,14 +16,16 @@ function Interval ({name, duration, category, day, month, year}){
         setEditState(!editState)
     }
 
-    //-------------make sure this makes it all the way to the API-----
+   
+  
     function handleDetailsInputChange(e){
         setDetails(e.target.value)
     }
 
     function setDescriptionChanges(){
-        setEditState(!editState)
-
+        setEditState(!editState);
+        postDetails(id);
+        console.log(id)
     }
 
 
@@ -64,10 +66,11 @@ function Interval ({name, duration, category, day, month, year}){
                 <br></br>
                 {`loggged on: ${day}/${month}/${year}`}
                 <br></br>
-                <p>{details}</p>
+                <p>{notes}</p>
                 <button onClick={handleDetailsClick}>hide details</button>
                 <button onClick={setDescriptionChanges}>set changes</button>
                 <input onChange={handleDetailsInputChange} type='text'></input>
+                <button onClick={handleEditClick} >cancel changes</button>
                 </li>
             </ul> 
         </div>
@@ -81,20 +84,13 @@ function Interval ({name, duration, category, day, month, year}){
                 <br></br>
                 {`loggged on: ${day}/${month}/${year}`}
                 <br></br>
-                <p>{details}</p>
+                <p>{notes}</p>
                 <button onClick={handleDetailsClick}>hide details</button>
                 <button onClick={handleEditClick} >edit</button>
                 </li>
             </ul> 
         </div>
     )
-
-
-     
-     ;
-
-    
-
 
 }
 

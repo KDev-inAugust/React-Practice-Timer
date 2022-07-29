@@ -12,7 +12,7 @@ function NavBar() {
           Interval List
         </NavLink>
         </h3>
-        <h3 class="tab"> 
+        <h3 className="tab"> 
         <NavLink
           to="/settings">
             Settings

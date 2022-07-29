@@ -4,6 +4,7 @@
       "name": "Trying to Code this thing",
       "duration": "10: 45",
       "category": "composition",
+      "details": "worked on form",
       "date": {
         "day": "27",
         "month": "6",
@@ -20,7 +21,8 @@
         "month": "6",
         "year": "2022"
       },
-      "id": 9
+      "id": 9,
+      "details": "test changes on second one"
     },
     {
       "name": "covid test",
@@ -42,7 +44,8 @@
         "month": "6",
         "year": "2022"
       },
-      "id": 11
+      "id": 11,
+      "details": "here are some notes"
     },
     {
       "name": "Date test six",
@@ -64,7 +67,8 @@
         "month": "6",
         "year": "2022"
       },
-      "id": 13
+      "id": 13,
+      "details": "testing changges"
     },
     {
       "name": "Date Test Seven",

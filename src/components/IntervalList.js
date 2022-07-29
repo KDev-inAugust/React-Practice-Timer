@@ -1,7 +1,7 @@
 import React from "react";
 import Interval from "./Interval";
 
-function IntervalList ({intervalData}){
+function IntervalList ({intervalData, details, setDetails, postDetails}){
 
 
 
@@ -16,7 +16,18 @@ function IntervalList ({intervalData}){
             <div>
                 
             <div key={index.name}>{intervalData[cur].date.day===index.date.day? null : `${index.date.day}/ ${index.date.month}`}</div>
-            <Interval key={index.id} name={index.name} duration={index.duration} category={index.category} day={index.date.day} month={index.date.month} year={index.date.year}/>
+            <Interval 
+            id={index.id} 
+            name={index.name} 
+            duration={index.duration} 
+            category={index.category} 
+            day={index.date.day} 
+            month={index.date.month} 
+            year={index.date.year}
+            notes={index.details}
+            details={details} 
+            setDetails={setDetails}
+            postDetails={postDetails}/>
             </div>
             )})}
             

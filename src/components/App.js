@@ -25,6 +25,7 @@ function App() {
   const [lastPost, setLastPost]=useState([])
   const [newCategory, setNewCategory]=useState("")
   const [categoryArray, setCategoryArray]=useState([]);
+  const [details, setDetails] = useState("")
   
 useEffect(()=>{
   fetch("http://localhost:3000/intervals")
@@ -102,6 +103,22 @@ useEffect(()=>{
     .then(data=>{setCategoryArray([...categoryArray, data])})
   }
 
+  //---------------post details from interval module------
+  function postDetails (id){
+      console.log(details);
+      fetch(`http://localhost:3000/intervals/${id}`,{
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          details: details
+        })
+      }
+      ).then(res=>res.json())
+      .then(data=>setLastPost(data))
+  }
+
   return (
     <div className="App">
       <h1>Practice Timer</h1>
@@ -114,7 +131,7 @@ useEffect(()=>{
       <NavBar />
         <Switch>
           <Route path="/intervalList">
-            <IntervalList intervalData={intervalData}/>
+            <IntervalList intervalData={intervalData} details={details} setDetails={setDetails} postDetails={postDetails}/>
           </Route>
           <Route path="/settings">
             <Settings handleAddCategory={handleAddCategory} newCategory={newCategory} setNewCategory={setNewCategory} categoryArray={categoryArray}/>
