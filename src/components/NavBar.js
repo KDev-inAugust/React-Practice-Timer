@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 function NavBar() {
   return (
   <div className="navbar">
-        <h3 class="tab"> 
+        <h3 className="tab"> 
         <NavLink
         to="/intervalList" >
           Interval List

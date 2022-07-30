@@ -1,7 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 
 
-function Settings ({handleAddCategory, newCategory, setNewCategory, categoryArray}){
+function Settings ({handleAddCategory, handleDeleteCategory, newCategory, setNewCategory, categoryArray}){
+
+
+    // let idSearch = categoryArray.filter((index)=>{if(index.name===categoryForDelete){return true}})
+    // console.log(idSearch);
+
+    const [categoryForDelete, setCategoryForDelete]=useState(null)
 
     function handleNewCatChange(e){
      setNewCategory(e.target.value);
@@ -12,12 +18,27 @@ function Settings ({handleAddCategory, newCategory, setNewCategory, categoryArra
         handleAddCategory(newCategory)
     }
 
+    function handleTargetForDelete(e){
+       setCategoryForDelete(e.target.value)
+    }
+
+    function handleDeleteClick (){
+        let idSearch = categoryArray.find((index)=>index.name===categoryForDelete)
+            console.log(idSearch.id);
+            handleDeleteCategory(idSearch.id)
+    }
+
+
 
     return(
         <div className="container">
             <div>
             <input onChange={handleNewCatChange} type="text" placeholder="new catergory name" ></input>
            <button onClick={handleClick} >add category</button>
+           <select onChange={handleTargetForDelete}>
+            {categoryArray.map(index=><option>{index.name}</option>)}
+           </select>
+           <button onClick={handleDeleteClick}>delete</button>
             </div>
             <div>
                 <h4>Category List</h4>

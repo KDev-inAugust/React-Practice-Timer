@@ -88,7 +88,7 @@ useEffect(()=>{
   }
 
   
-
+//---------------add a new category----------------
   function handleAddCategory(newCategory){
     fetch("http://localhost:3000/categories",{
       method: "POST",
@@ -102,6 +102,24 @@ useEffect(()=>{
     ).then(res=>res.json())
     .then(data=>{setCategoryArray([...categoryArray, data])})
   }
+
+  //-------------remove a category----------------
+
+  function handleDeleteCategory(id){
+    fetch(`http://localhost:3000/categories/${id}`,{
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+      ).then(res=>res.json())
+      .then(data=>console.log(data));
+
+      fetch("http://localhost:3000/categories")
+  .then(res=>res.json())
+  .then(data=>setCategoryArray(data));
+  }
+  
 
   //---------------post details from interval module------
   function postDetails (id){
@@ -134,7 +152,12 @@ useEffect(()=>{
             <IntervalList intervalData={intervalData} details={details} setDetails={setDetails} postDetails={postDetails}/>
           </Route>
           <Route path="/settings">
-            <Settings handleAddCategory={handleAddCategory} newCategory={newCategory} setNewCategory={setNewCategory} categoryArray={categoryArray}/>
+            <Settings 
+            handleAddCategory={handleAddCategory} 
+            newCategory={newCategory} 
+            setNewCategory={setNewCategory} 
+            categoryArray={categoryArray} 
+            handleDeleteCategory={handleDeleteCategory}/>
           </Route>
         </Switch>
       

@@ -4,7 +4,7 @@
       "name": "Trying to Code this thing",
       "duration": "10: 45",
       "category": "composition",
-      "details": "worked on form",
+      "details": "worked on form studies. Preparing to assimilate new study",
       "date": {
         "day": "27",
         "month": "6",
@@ -148,6 +148,18 @@
       },
       "id": 20,
       "details": "details now work, check it out. "
+    },
+    {
+      "name": "covid test",
+      "duration": "15: 12",
+      "category": "",
+      "date": {
+        "day": "30",
+        "month": "6",
+        "year": "2022"
+      },
+      "id": 21,
+      "details": "last tour test-negative"
     }
   ],
   "categories": [
@@ -160,16 +172,8 @@
       "id": 2
     },
     {
-      "name": "scales practice",
-      "id": 3
-    },
-    {
       "name": "Ear Training",
       "id": 4
-    },
-    {
-      "name": "Solfege",
-      "id": 5
     },
     {
       "name": "Sight Singing",
@@ -178,10 +182,6 @@
     {
       "name": "coding",
       "id": 7
-    },
-    {
-      "name": "Meditation",
-      "id": 8
     }
   ]
 }

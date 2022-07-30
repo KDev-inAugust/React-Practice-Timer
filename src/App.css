@@ -25,6 +25,23 @@ p{
   }
 }
 
+#timer {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0px;
+  z-index: 0;
+}
+
+#intervalDataInput{
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 180px;
+}
+
+#transport {
+  
+}
+
 .navbar {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: flex;
@@ -57,6 +74,10 @@ backdrop-filter: blur( 4px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
   padding: 10px;
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 220px;
+  
 }
 
 

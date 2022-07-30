@@ -24,7 +24,7 @@ function IntervalDataInput ({setIntervalName, setIntervalType, handleLogSession,
   }
 
   return (
-        <form onSubmit={handleSubmit}>
+        <form id="intervalDataInput" onSubmit={handleSubmit}>
           <input onChange={handleIntDescripChange} type="text" placeholder="interval name"></input>
           <select onChange={handleSetIntervalType } >
                 <option>select interval type</option>
