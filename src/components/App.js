@@ -74,7 +74,7 @@ useEffect(()=>{
       },
       body: JSON.stringify({
         name: intervalName,
-        duration: `${minutes}: ${seconds}`,
+        duration: `${minutes}:${seconds}`,
         category: `${intervalType}`,
         date: {
           day:`${day}`,

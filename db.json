@@ -160,6 +160,51 @@
       },
       "id": 21,
       "details": "last tour test-negative"
+    },
+    {
+      "name": "testing the analysis function",
+      "duration": "1:51",
+      "category": "coding",
+      "date": {
+        "day": "4",
+        "month": "7",
+        "year": "2022"
+      },
+      "id": 22
+    },
+    {
+      "name": "testing the analysis function",
+      "duration": "2:12",
+      "category": "coding",
+      "date": {
+        "day": "4",
+        "month": "7",
+        "year": "2022"
+      },
+      "id": 23
+    },
+    {
+      "name": "testing the analysis function",
+      "duration": "2:15",
+      "category": "coding",
+      "date": {
+        "day": "4",
+        "month": "7",
+        "year": "2022"
+      },
+      "id": 24
+    },
+    {
+      "name": "testing the analysis function",
+      "duration": "2:27",
+      "category": "coding",
+      "date": {
+        "day": "4",
+        "month": "7",
+        "year": "2022"
+      },
+      "id": 25,
+      "details": "this function now works"
     }
   ],
   "categories": [
@@ -174,10 +219,6 @@
     {
       "name": "Ear Training",
       "id": 4
-    },
-    {
-      "name": "Sight Singing",
-      "id": 6
     },
     {
       "name": "coding",
