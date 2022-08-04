@@ -9,7 +9,7 @@ import IntervalList from './IntervalList';
 import Transport from './Transport';
 import Settings from './settings';
 import Timer from './Timer';
-
+import Analysis from './Analysis';
 
 
 
@@ -142,10 +142,25 @@ useEffect(()=>{
       <h1>Practice Timer</h1>
       <h2>current interval</h2>
       <br></br>
-      <Timer minutes={minutes} seconds={seconds} month={month} day={day} year={year} intervalStart={intervalStart}/>
-      <IntervalDataInput setIntervalName={setIntervalName} setIntervalType={setIntervalType} handleLogSession={handleLogSession} categoryArray={categoryArray}/>
+      <Timer 
+        minutes={minutes} 
+        seconds={seconds} 
+        month={month} 
+        day={day} 
+        year={year} 
+        intervalStart={intervalStart}/>
+      <IntervalDataInput 
+        setIntervalName={setIntervalName} 
+        setIntervalType={setIntervalType} 
+        handleLogSession={handleLogSession} 
+        categoryArray={categoryArray}/>
       <br></br>
-      <Transport pause={pause} setPause={setPause} setMinutes={setMinutes} setSeconds={setSeconds} setIntervalStart={setIntervalStart}/>
+      <Transport 
+        pause={pause} 
+        setPause={setPause} 
+        setMinutes={setMinutes} 
+        setSeconds={setSeconds} 
+        setIntervalStart={setIntervalStart}/>
       <NavBar />
         <Switch>
           <Route path="/intervalList">
@@ -153,15 +168,16 @@ useEffect(()=>{
           </Route>
           <Route path="/settings">
             <Settings 
-            handleAddCategory={handleAddCategory} 
-            newCategory={newCategory} 
-            setNewCategory={setNewCategory} 
-            categoryArray={categoryArray} 
-            handleDeleteCategory={handleDeleteCategory}/>
+              handleAddCategory={handleAddCategory} 
+              newCategory={newCategory} 
+              setNewCategory={setNewCategory} 
+              categoryArray={categoryArray} 
+              handleDeleteCategory={handleDeleteCategory}/>
+          </Route>
+          <Route path="/analysis">
+            <Analysis intervalData={intervalData} categoryArray={categoryArray}/>
           </Route>
         </Switch>
-      
-      
     </div>
   );
 }

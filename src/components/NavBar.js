@@ -18,6 +18,11 @@ function NavBar() {
             Settings
         </NavLink>
         </h3>
+        <h3 className="tab">
+          <NavLink to="/analysis">
+            Analysis
+          </NavLink>
+        </h3>
   </div>
   );
 }
