@@ -1,7 +1,7 @@
 import React from "react";
 import Interval from "./Interval";
 
-function IntervalList ({intervalData, details, setDetails, postDetails}){
+function IntervalList ({intervalData, details, setDetails, postDetails, deleteAnInterval}){
 
 
 
@@ -27,7 +27,8 @@ function IntervalList ({intervalData, details, setDetails, postDetails}){
             notes={index.details}
             details={details} 
             setDetails={setDetails}
-            postDetails={postDetails}/>
+            postDetails={postDetails}
+            deleteAnInterval={deleteAnInterval}/>
             </div>
             )})}
             

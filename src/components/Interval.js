@@ -2,7 +2,19 @@ import React , {useState} from "react";
 
 
 
-function Interval ({id, name, duration, category, day, month, year, notes, details, setDetails, postDetails}){
+function Interval ({
+    id, 
+    name, 
+    duration, 
+    category, 
+    day, 
+    month, 
+    year, 
+    notes, 
+    details, 
+    setDetails, 
+    postDetails,
+    deleteAnInterval}){
 
     const [showDetails, setShowDetails] = useState(false)
     
@@ -15,8 +27,6 @@ function Interval ({id, name, duration, category, day, month, year, notes, detai
     function handleEditClick(){
         setEditState(!editState)
     }
-
-   
   
     function handleDetailsInputChange(e){
         setDetails(e.target.value)
@@ -26,6 +36,14 @@ function Interval ({id, name, duration, category, day, month, year, notes, detai
         setEditState(!editState);
         postDetails(id);
         console.log(id)
+    }
+
+    function handleDeleteInterval(){
+       if (window.confirm('are you sure you want to delete this interval?')===true){
+        deleteAnInterval(id)
+        console.log('id',id);
+        setShowDetails(false)
+       }
     }
 
 
@@ -73,6 +91,7 @@ function Interval ({id, name, duration, category, day, month, year, notes, detai
                 <button onClick={setDescriptionChanges}>set changes</button>
                 <input onChange={handleDetailsInputChange} type='text'></input>
                 <button onClick={handleEditClick} >cancel changes</button>
+                <button onClick={handleDeleteInterval} >delete this interval</button>
                 </li>
             </ul> 
         </div>

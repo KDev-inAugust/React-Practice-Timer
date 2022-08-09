@@ -136,6 +136,15 @@ useEffect(()=>{
       ).then(res=>res.json())
       .then(data=>setLastPost(data))
   }
+  //---------------delete an interval--------------
+
+  function deleteAnInterval (id){
+    fetch (`http://localhost:3000/intervals/${id}`,{
+      method: "DELETE",
+    })
+    .then((res)=>res.json())
+    .then(data=>setLastPost(data));
+  }
 
   return (
     <div className="App">
@@ -164,7 +173,12 @@ useEffect(()=>{
       <NavBar />
         <Switch>
           <Route path="/intervalList">
-            <IntervalList intervalData={intervalData} details={details} setDetails={setDetails} postDetails={postDetails}/>
+            <IntervalList 
+            intervalData={intervalData} 
+            details={details} 
+            setDetails={setDetails} 
+            postDetails={postDetails}
+            deleteAnInterval={deleteAnInterval}/>
           </Route>
           <Route path="/settings">
             <Settings 
