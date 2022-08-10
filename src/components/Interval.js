@@ -88,8 +88,8 @@ function Interval ({
                 <p>{notes}</p>
                 <br></br>
                 <button onClick={handleDetailsClick}>hide details</button>
+                <textarea onChange={handleDetailsInputChange}></textarea>
                 <button onClick={setDescriptionChanges}>set changes</button>
-                <input onChange={handleDetailsInputChange} type='text'></input>
                 <button onClick={handleEditClick} >cancel changes</button>
                 <button onClick={handleDeleteInterval} >delete this interval</button>
                 </li>

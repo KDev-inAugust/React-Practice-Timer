@@ -61,8 +61,10 @@ useEffect(()=>{
 
   //---------time stamp info-----------
     let day = new Date().getDate()
-    let month = new Date().getMonth();
+    let month = new Date().getMonth()+1;
     let year = new Date().getFullYear();
+
+    
 
   //---------log interval on click--------
     
@@ -145,6 +147,7 @@ useEffect(()=>{
     .then((res)=>res.json())
     .then(data=>setLastPost(data));
   }
+
 
   return (
     <div className="App">

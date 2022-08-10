@@ -4,6 +4,9 @@ import Interval from "./Interval";
 function IntervalList ({intervalData, details, setDetails, postDetails, deleteAnInterval}){
 
 
+   
+
+   
 
     return(
         <div className="container">

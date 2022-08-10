@@ -10,7 +10,7 @@
         "year": "2022"
       },
       "id": 9,
-      "details": "test changes on second one"
+      "details": "these are the multi-line notes associated with this interval and they will simply appear formatted according to where the line break is. \nbut I can tie return\n1- add numbers to track some other things as well\n"
     },
     {
       "name": "",
@@ -72,15 +72,37 @@
       "details": "this function now works"
     },
     {
-      "name": "",
-      "duration": "11:48",
-      "category": "Ear Training",
+      "name": "test interval ",
+      "duration": "3:16",
+      "category": "coding",
       "date": {
-        "day": "7",
-        "month": "7",
+        "day": "10",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 26
+    },
+    {
+      "name": "test interval ",
+      "duration": "3:26",
+      "category": "Composition",
+      "date": {
+        "day": "10",
+        "month": "8",
         "year": "2022"
       },
       "id": 27
+    },
+    {
+      "name": "test interval ",
+      "duration": "3:39",
+      "category": "Ear Training",
+      "date": {
+        "day": "10",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 28
     }
   ],
   "categories": [
