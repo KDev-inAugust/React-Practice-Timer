@@ -1,36 +1,12 @@
-import React from "react";
+import React , {useState} from "react";
 
 
 
 function Analysis ({intervalData, categoryArray}){
 
-    let lastWeekArray=[];
+    const [weekAmountArray, setWeekAmountArray]=useState([1,2,3,4])
+    const [selectedAmount, setSelectedAmount]=useState(3)
 
-     function dbDateExtractor(){
-        let numWeeks = 1;
-        let now = new Date();
-        now.setDate(now.getDate() - numWeeks * 7);
-        console.log(now);
-        let lastWeek = Date.parse(now);
-        console.log('last week', lastWeek);
-        //---ms in a week = 604800000 --- today = 1660169736000
-
-        for(let index of intervalData){
-            let day = index.date.day;
-            let month = index.date.month;
-            let year = index.date.year;
-            console.log('in for loop', Date.parse(year-month-day));
-            let todaysDateMs=Date.parse(new Date());
-            let indexDateMs=Date.parse(`${year}-${month}-${day}`);
-            console.log('the math', todaysDateMs-indexDateMs)
-            if(indexDateMs>lastWeek){
-                    lastWeekArray.push(index.id)
-            }
-        }        
-     }
-
-
-     dbDateExtractor()
 
 //--------------Turn the duration into a string--------
     function parseDurationString (index1){
@@ -48,9 +24,11 @@ function Analysis ({intervalData, categoryArray}){
     }
 
 
-    let analysisObject = {};
 
    //-------------create arrays of time entries-----------
+
+   let analysisObject = {};
+
     function createAnalysisObject(){
         for (let interval of intervalData){
             for (let category of categoryArray){
@@ -67,11 +45,67 @@ function Analysis ({intervalData, categoryArray}){
             }
         };
     }
-
-    //-------------add total time per category--------------
-
     createAnalysisObject()
-    console.log(lastWeekArray)
+    
+//----------find the totals for last week only-----------
+let lastWeekArray=[];
+
+function dbDateExtractor(){
+   let numWeeks = selectedAmount;
+   let now = new Date();
+   now.setDate(now.getDate() - numWeeks * 7);
+   console.log(now);
+   let lastWeek = Date.parse(now);
+
+   for(let index of intervalData){
+       let day = index.date.day;
+       let month = index.date.month;
+       let year = index.date.year;
+       let indexDateMs=Date.parse(`${year}-${month}-${day}`);
+       if(indexDateMs>lastWeek){
+               lastWeekArray.push(index.id)
+       }
+   }        
+}
+
+dbDateExtractor()
+
+let lastWeeksObjects = [];
+for (let interval of intervalData) {
+   for(let element of lastWeekArray){
+       if (interval.id===element){
+      lastWeeksObjects.push(interval);
+       }}}
+
+//--------------create last week analysis object--------------
+
+let lastWeekAnalysisObject = {};
+
+    function createLastWeekAnalysisObject(){
+        for (let interval of lastWeeksObjects){
+            for (let category of categoryArray){
+                if (interval.category===category.name){
+                    if (lastWeekAnalysisObject[interval.category]===undefined)
+                    {lastWeekAnalysisObject[interval.category]=[];}
+                    if (lastWeekAnalysisObject[interval.category].length<1){
+                        lastWeekAnalysisObject[interval.category]=[interval.duration];
+                    }
+                    else lastWeekAnalysisObject[interval.category].push(interval.duration);
+
+                    lastWeekAnalysisObject[interval.category].total=parseDurationString(lastWeekAnalysisObject[interval.category]);
+                }
+            }
+        };
+    }
+    createLastWeekAnalysisObject();
+//-------------on change function for selecting the amount of weeks
+
+function handleWeeksChange(e){
+    setSelectedAmount(e.target.value)
+}
+
+//-------------add total time per category--------------
+    
     return (
         <div className="container">
         {
@@ -84,11 +118,30 @@ function Analysis ({intervalData, categoryArray}){
                 )
             })
         }
-        {lastWeekArray.map(index=>{
-            return(
-                <p>{index}</p>
-            )
-        })}
+                {/* --------add totals for selected week range----------------- */}
+            <div>
+                <h1>{"Last "}
+                <select onChange={handleWeeksChange}>
+                    {weekAmountArray.map((index)=>{
+                        return (
+                            <option>{index}</option>
+                        )
+                    })}
+                 </select> Weeks
+                </h1>
+                <hr />
+                {
+                    
+                     Object.keys(lastWeekAnalysisObject).map((key, index)=>{
+                        return (
+                            <div key={index}>
+                                <h2>{key}: {lastWeekAnalysisObject[key].total}</h2>
+                                <hr />
+                                </div>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }

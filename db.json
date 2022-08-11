@@ -3,10 +3,10 @@
     {
       "name": "Trying to Code this thing",
       "duration": "37:56",
-      "category": "composition",
+      "category": "Composition",
       "date": {
-        "day": "27",
-        "month": "6",
+        "day": "15",
+        "month": "7",
         "year": "2022"
       },
       "id": 9,
@@ -15,7 +15,7 @@
     {
       "name": "",
       "duration": "1:4",
-      "category": "Sight Singing",
+      "category": "Ear Training",
       "date": {
         "day": "28",
         "month": "6",
@@ -37,11 +37,11 @@
     },
     {
       "name": "continuing to get details working",
-      "duration": "1:48",
+      "duration": "50:48",
       "category": "coding",
       "date": {
-        "day": "29",
-        "month": "6",
+        "day": "28",
+        "month": "7",
         "year": "2022"
       },
       "id": 20,
@@ -50,10 +50,10 @@
     {
       "name": "covid test",
       "duration": "15:12",
-      "category": "",
+      "category": "coding",
       "date": {
         "day": "30",
-        "month": "6",
+        "month": "7",
         "year": "2022"
       },
       "id": 21,
@@ -64,8 +64,8 @@
       "duration": "2:27",
       "category": "coding",
       "date": {
-        "day": "4",
-        "month": "7",
+        "day": "1",
+        "month": "8",
         "year": "2022"
       },
       "id": 25,
@@ -87,7 +87,7 @@
       "duration": "3:26",
       "category": "Composition",
       "date": {
-        "day": "10",
+        "day": "11",
         "month": "8",
         "year": "2022"
       },
@@ -98,7 +98,7 @@
       "duration": "3:39",
       "category": "Ear Training",
       "date": {
-        "day": "10",
+        "day": "11",
         "month": "8",
         "year": "2022"
       },
