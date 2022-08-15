@@ -56,7 +56,7 @@ useEffect(()=>{
   fetch("http://localhost:3000/categories")
   .then(res=>res.json())
   .then(data=>setCategoryArray(data));
-},[])
+})
 
 
   //---------time stamp info-----------
@@ -119,7 +119,7 @@ useEffect(()=>{
 
       fetch("http://localhost:3000/categories")
   .then(res=>res.json())
-  .then(data=>setCategoryArray(data));
+  .then(data=>setCategoryArray(data))
   }
   
 
