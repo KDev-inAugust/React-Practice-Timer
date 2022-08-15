@@ -121,7 +121,7 @@ function handleWeeksChange(e){
                 {/* --------add totals for selected week range----------------- */}
             <div>
                 <h1>{"Last "}
-                <select onChange={handleWeeksChange}>
+                <select className="weekAmount" onChange={handleWeeksChange}>
                     {weekAmountArray.map((index)=>{
                         return (
                             <option>{index}</option>

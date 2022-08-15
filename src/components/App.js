@@ -153,7 +153,6 @@ useEffect(()=>{
     <div className="App">
       <h1>Practice Timer</h1>
       <h2>current interval</h2>
-      <br></br>
       <Timer 
         minutes={minutes} 
         seconds={seconds} 
@@ -175,7 +174,7 @@ useEffect(()=>{
         setIntervalStart={setIntervalStart}/>
       <NavBar />
         <Switch>
-          <Route path="/intervalList">
+          <Route exact path="/">
             <IntervalList 
             intervalData={intervalData} 
             details={details} 

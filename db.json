@@ -33,7 +33,8 @@
         "month": "6",
         "year": "2022"
       },
-      "id": 19
+      "id": 19,
+      "details": "there are some multi-line notes here for this interval. "
     },
     {
       "name": "continuing to get details working",
@@ -69,7 +70,7 @@
         "year": "2022"
       },
       "id": 25,
-      "details": "this function now works"
+      "details": "asdasd"
     },
     {
       "name": "test interval ",
@@ -80,7 +81,8 @@
         "month": "8",
         "year": "2022"
       },
-      "id": 26
+      "id": 26,
+      "details": "   "
     },
     {
       "name": "test interval ",
@@ -103,6 +105,74 @@
         "year": "2022"
       },
       "id": 28
+    },
+    {
+      "name": "Styling App",
+      "duration": "11:45",
+      "category": "coding",
+      "date": {
+        "day": "15",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 29,
+      "details": "worked a bit on styling the app and fixed a Route glitch"
+    },
+    {
+      "name": "Styling App",
+      "duration": "11:45",
+      "category": "coding",
+      "date": {
+        "day": "15",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 30
+    },
+    {
+      "name": "Styling App",
+      "duration": "11:45",
+      "category": "coding",
+      "date": {
+        "day": "15",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 31
+    },
+    {
+      "name": "Styling App",
+      "duration": "11:45",
+      "category": "Composition",
+      "date": {
+        "day": "15",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 32
+    },
+    {
+      "name": "Styling App",
+      "duration": "11:45",
+      "category": "Instrumental Practice",
+      "date": {
+        "day": "15",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 33,
+      "details": "I can add some notes here that will append to the interval"
+    },
+    {
+      "name": "Practice Timer App Demo",
+      "duration": "0:49",
+      "category": "coding",
+      "date": {
+        "day": "15",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 34
     }
   ],
   "categories": [

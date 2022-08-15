@@ -83,14 +83,17 @@ function Interval ({
                 {`${name} ${duration} ${category}`}
                 <br></br>
                 {`loggged on: ${day}/${month}/${year}`}
-                <h4>notes:</h4>
                 <hr></hr>
-                <p>{notes}</p>
-                <br></br>
+                <h4>notes:</h4>
+                 <p>{notes}</p>
                 <button onClick={handleDetailsClick}>hide details</button>
+                <br></br>
                 <textarea onChange={handleDetailsInputChange}></textarea>
+                <br></br>
                 <button onClick={setDescriptionChanges}>set changes</button>
+                <br></br>
                 <button onClick={handleEditClick} >cancel changes</button>
+                <br></br>
                 <button onClick={handleDeleteInterval} >delete this interval</button>
                 </li>
             </ul> 
@@ -104,10 +107,9 @@ function Interval ({
                 {`${name} ${duration} ${category}`}
                 <br></br>
                 {`loggged on: ${day}/${month}/${year}`}
-                <h4>notes:</h4>
                 <hr></hr>
+                <h4>notes:</h4>
                 <p>{notes}</p>
-                <br></br>
                 <button onClick={handleDetailsClick}>hide details</button>
                 <button onClick={handleEditClick} >edit</button>
                 </li>

@@ -8,7 +8,7 @@ function NavBar() {
   <div className="navbar">
         <h3 className="tab"> 
         <NavLink
-        to="/intervalList" >
+        to="/" >
           Interval List
         </NavLink>
         </h3>
