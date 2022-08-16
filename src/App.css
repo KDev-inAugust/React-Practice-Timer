@@ -199,8 +199,7 @@ button {
   width: auto;
 }
 
-button:hover,
-button:focus {
+button:hover {
   background-color: #fb8332;
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
@@ -221,7 +220,7 @@ input {
   background: 0;
   border: 0;
   outline: none;
-  width: 10em;
+  width:11em;
   font-size: 15px;
   margin: auto;
   text-align: center;

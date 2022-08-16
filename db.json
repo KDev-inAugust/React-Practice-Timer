@@ -195,6 +195,17 @@
         "year": "2022"
       },
       "id": 36
+    },
+    {
+      "name": "Working on this very app",
+      "duration": "0:2",
+      "category": "Probably Nothing",
+      "date": {
+        "day": "16",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 37
     }
   ],
   "categories": [
@@ -213,6 +224,14 @@
     {
       "name": "coding",
       "id": 7
+    },
+    {
+      "name": "Probably Nothing",
+      "id": 8
+    },
+    {
+      "name": "delete this",
+      "id": 9
     }
   ]
 }
