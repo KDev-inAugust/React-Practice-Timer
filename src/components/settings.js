@@ -22,10 +22,13 @@ function Settings ({handleAddCategory, handleDeleteCategory, newCategory, setNew
        setCategoryForDelete(e.target.value)
     }
 
-    function handleDeleteClick (){
+    function handleDeleteClick (e){
         let idSearch = categoryArray.find((index)=>index.name===categoryForDelete)
             console.log(idSearch.id);
-            handleDeleteCategory(idSearch.id)
+            handleDeleteCategory(idSearch.id);
+            console.log(e.target.previousElementSibling[0]);
+            e.target.previousElementSibling.value="default";
+
     }
 
 
@@ -36,6 +39,7 @@ function Settings ({handleAddCategory, handleDeleteCategory, newCategory, setNew
             <input onChange={handleNewCatChange} type="text" placeholder="new catergory name" ></input>
            <button onClick={handleClick} >add category</button>
            <select onChange={handleTargetForDelete}>
+            <option value="default">select category</option>
             {categoryArray.map(index=><option>{index.name}</option>)}
            </select>
            <button onClick={handleDeleteClick}>delete</button>
