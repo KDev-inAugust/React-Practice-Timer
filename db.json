@@ -173,6 +173,17 @@
         "year": "2022"
       },
       "id": 34
+    },
+    {
+      "name": "a test interval",
+      "duration": "0:29",
+      "category": "misc category",
+      "date": {
+        "day": "15",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 35
     }
   ],
   "categories": [
