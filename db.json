@@ -1,11 +1,11 @@
 {
   "intervals": [
     {
-      "name": "Trying to Code this thing",
+      "name": "New Idea",
       "duration": "37:56",
       "category": "Composition",
       "date": {
-        "day": "15",
+        "day": "27",
         "month": "7",
         "year": "2022"
       },
@@ -13,12 +13,12 @@
       "details": "these are the multi-line notes associated with this interval and they will simply appear formatted according to where the line break is. \nbut I can tie return\n1- add numbers to track some other things as well\n"
     },
     {
-      "name": "",
+      "name": "Sight Singing",
       "duration": "1:4",
       "category": "Ear Training",
       "date": {
         "day": "28",
-        "month": "6",
+        "month": "7",
         "year": "2022"
       },
       "id": 18,
@@ -30,11 +30,11 @@
       "category": "coding",
       "date": {
         "day": "28",
-        "month": "6",
+        "month": "7",
         "year": "2022"
       },
       "id": 19,
-      "details": "there are some multi-line notes here for this interval. "
+      "details": "These are some additional multi-line notes for this interval. "
     },
     {
       "name": "continuing to get details working",
@@ -100,7 +100,7 @@
       "duration": "3:39",
       "category": "Ear Training",
       "date": {
-        "day": "11",
+        "day": "1",
         "month": "8",
         "year": "2022"
       },
@@ -152,6 +152,39 @@
       "id": 32
     },
     {
+      "name": "Transcription",
+      "duration": "11:45",
+      "category": "Composition",
+      "date": {
+        "day": "10",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 39
+    },
+    {
+      "name": "Harp",
+      "duration": "11:45",
+      "category": "Instrumental Practice",
+      "date": {
+        "day": "1",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 40
+    },
+    {
+      "name": "Harp",
+      "duration": "30:45",
+      "category": "Instrumental Practice",
+      "date": {
+        "day": "8",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 40
+    },
+    {
       "name": "Styling App",
       "duration": "11:45",
       "category": "Instrumental Practice",
@@ -199,13 +232,24 @@
     {
       "name": "Working on this very app",
       "duration": "0:2",
-      "category": "Probably Nothing",
+      "category": "coding",
       "date": {
         "day": "16",
         "month": "8",
         "year": "2022"
       },
       "id": 37
+    },
+    {
+      "name": "creating the read me for this app",
+      "duration": "19:33",
+      "category": "coding",
+      "date": {
+        "day": "22",
+        "month": "8",
+        "year": "2022"
+      },
+      "id": 38
     }
   ],
   "categories": [
@@ -224,14 +268,6 @@
     {
       "name": "coding",
       "id": 7
-    },
-    {
-      "name": "Probably Nothing",
-      "id": 8
-    },
-    {
-      "name": "delete this",
-      "id": 9
     }
   ]
 }
