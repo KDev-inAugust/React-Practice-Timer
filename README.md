@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# React Practice Timer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is a simple practice timer to track progress across multiple tasks or disciplines. 
 
-## Available Scripts
+## Features
 
 In the project directory, you can run:
 
