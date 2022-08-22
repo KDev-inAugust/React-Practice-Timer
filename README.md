@@ -4,46 +4,39 @@ This app is a simple practice timer to track progress across multiple tasks or d
 
 ## Features
 
-In the project directory, you can run:
+The Practice Timer has the following features:
 
-### `npm start`
+### `Start, Pause, and Resume Interval`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Clicking on the Start Button Begins the interval clock.
+That button then becomes a Pause button if you need to step away from an interval to make some tea or take some other kind of break then you can resume your interval by clicking the same button again. Only resetting the interval will erase time currently logged and reset the timer and the hour and minutes of the beginnig of the session.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `Log Interval`
 
-### `npm test`
+Clicking on the Log Interval button will log your interval to the list of intervals, the timer does not have to be stopped to do this. You can pause the interval when you are done working and set the detals at that time if you wish. You can then log the interval after you have decided to stop work for that interval.
+Intervals are automatically organized by date. Interval details are set by typing in the name and selecting the interval type to the left of the Log Interval Button. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Interval Details`
 
-### `npm run build`
+Each interval in the interval list will show its detial by clicking the 'show details' button.
+Clicking that button expands the  interval details to show the date the interval was logged as well as the interval duration and its name if you chose to enter one. Notes for the interval are also diplayed for a more detailed log of work accomplished during this interval. clicking 'hide details' reverts back to the default view.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+clicking edit details allows for input of multi-line notes as well as the option to delete the interval altogether. 
+clicking delete interval will generate and alert box for you to make sure you really want to delete the interval.
+you also have a button for cancelling changes if you are in the middle of editing notes and decide to discard changes. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `Settings`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The Setting tab allows you to add and delete categories. 
+You can log an interval with no category at all if you like but only named and assigned categories will be sent to the next tab for analysis.
 
-### `npm run eject`
+### `Analysis`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The 'Analysis' Tab gives you totals of how much time you spent on intervals. This data is presented to you in two simple but useful ways. 
+The contianer first totals all the time by named catergory. 
+Scrolling down you will see a second section that allows you to look at totals for the past 1-4 weeks to give you picture of what your habits have been across categories in a fairly recent past. Use the dropdown menu in that section to select a number between 1 and 4. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
 
