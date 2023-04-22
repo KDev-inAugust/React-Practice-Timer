@@ -1,10 +1,12 @@
-import React from "react";
+import {React, useState} from "react";
 
 
 //-------------Interval Data Component--------
 
 function IntervalDataInput ({setIntervalName, setIntervalType, handleLogSession, categoryArray}){
 
+const [count, setCount] = useState(0);
+const [text, setText] = useState("input")
 
   function handleSubmit(e){
     e.preventDefault();
@@ -23,7 +25,17 @@ function IntervalDataInput ({setIntervalName, setIntervalType, handleLogSession,
     handleLogSession()
   }
 
+
+  function handleChangeText(e){
+    setText(e.target.value);
+   
+  }
+
+ 
+
   return (
+    <div>
+
         <form id="intervalDataInput" onSubmit={handleSubmit}>
           <input onChange={handleIntDescripChange} type="text" placeholder="interval name"></input>
           <select onChange={handleSetIntervalType } >
@@ -39,6 +51,7 @@ function IntervalDataInput ({setIntervalName, setIntervalType, handleLogSession,
           <button onClick={handleLogClick}>Log Interval</button>
 
         </form>
+        </div>
   )
 }
 
