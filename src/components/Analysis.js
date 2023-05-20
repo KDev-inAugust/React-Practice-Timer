@@ -54,7 +54,6 @@ function dbDateExtractor(){
    let numWeeks = selectedAmount;
    let now = new Date();
    now.setDate(now.getDate() - numWeeks * 7);
-   console.log(now);
    let lastWeek = Date.parse(now);
 
    for(let index of intervalData){

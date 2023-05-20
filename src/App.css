@@ -7,10 +7,6 @@ p{
   max-width: 90%;
   margin: auto;
 }
-.App {
-  text-align: center;
-  font-size: larger;
-}
 
 .App-logo {
   height: 40vmin;
@@ -26,8 +22,19 @@ p{
   }
 }
 
+#header{
+  font-size: x-large;
+  padding: 10px;
+  background-color: rgba(110, 112, 130, 0.439);
+}
+
 #clockBorder {
   height: 100px;
+}
+
+#session-timestamp{
+  text-align: center;
+  margin-top: 60px;
 }
 
 
@@ -35,6 +42,7 @@ p{
   position: -webkit-sticky; 
   position: sticky;
   top: 180px;
+  text-align: center;
 }
 
 
@@ -93,6 +101,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 #timer {
+  text-align: center;
   height: 200px;
   position: relative;
 }
@@ -115,12 +124,16 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 
 .interval {
+  margin: 20px;
+  padding: 10px;
+  font-size: large;
 background: rgba(125, 75, 200, 0.25);
 box-shadow: 6px 4px 7px -3px rgba(0,0,0,0.85);
 backdrop-filter: blur( 4px );
 -webkit-backdrop-filter: blur( 4px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
+line-height: auto;
 }
 
 .weekAmount{
@@ -134,15 +147,18 @@ padding: 5px;
 .paused{
   font-size: medium;
   border-radius: 50px;
-  padding: 30px;
+  padding: 15px;
   background-color: rgb(104, 205, 138);
+  margin-right: 20%;
 }
 
 .running {
   font-size: medium;
+  width: fit-content;
   border-radius: 50px;
-  padding: 30px;
+  padding: 10px;
   background-color: rgb(183, 190, 48);
+  margin-right: 20%;
 }
 .App-header {
   background-color: #282c34;
@@ -167,7 +183,11 @@ padding: 5px;
     transform: rotate(360deg);
   }
 }
-
+#notes{
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 10px;
+}
 
 /* button styling */
 button {
@@ -180,15 +200,16 @@ button {
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  display: inline-flex;
+  display: inline-block;
   font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 15px;
   font-weight: 600;
   justify-content: center;
   line-height: 1.25;
-  margin: 0;
-  min-height: 3rem;
+  min-height: 1rem;
   padding: 10px;
+  margin-right: 10px;
+  /* margin: auto; */
   position: relative;
   text-decoration: none;
   transition: all 250ms;
@@ -222,8 +243,12 @@ input {
   outline: none;
   width:11em;
   font-size: 15px;
-  margin: auto;
+  margin: 10px;
   text-align: center;
+}
+
+textarea {
+  margin: 10px;
 }
 
 select {

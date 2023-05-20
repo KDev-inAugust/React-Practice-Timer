@@ -1,33 +1,25 @@
 {
   "intervals": [
     {
-      "name": "",
-      "duration": "0:2",
-      "category": "",
+      "name": "First Interval of the Log!!!",
+      "duration": "2:8",
+      "category": "coding",
       "date": {
-        "day": "22",
-        "month": "4",
+        "day": "20",
+        "month": "5",
         "year": "2023"
       },
-      "id": 1
+      "id": 14
     }
   ],
   "categories": [
     {
-      "name": "Instrumental Practice",
-      "id": 1
-    },
-    {
-      "name": "Composition",
-      "id": 2
-    },
-    {
-      "name": "Ear Training",
-      "id": 4
-    },
-    {
       "name": "coding",
       "id": 7
+    },
+    {
+      "name": "other",
+      "id": 8
     }
   ]
 }

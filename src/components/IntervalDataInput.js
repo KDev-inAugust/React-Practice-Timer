@@ -18,7 +18,6 @@ const [text, setText] = useState("input")
 
   function handleSetIntervalType (e){
     setIntervalType(e.target.value);
-    console.log(e.target.value)
   }
 
   function handleLogClick(e){

@@ -35,28 +35,26 @@ function Interval ({
     function setDescriptionChanges(){
         setEditState(!editState);
         postDetails(id);
-        console.log(id)
     }
 
     function handleDeleteInterval(){
        if (window.confirm('are you sure you want to delete this interval?')===true){
-        deleteAnInterval(id)
-        console.log('id',id);
-        setShowDetails(false)
+        deleteAnInterval(id);
+        setShowDetails(false);
        }
     }
 
 
     if (showDetails===false){
     return(
-        <div>
-            <ul>
-                <li className="interval">
-                {`${name} ${duration} ${category}`}
+        <div className="interval">
+                <b>{name}</b>
+                <br></br>
+                <b>duration: </b>{duration}
+                <br></br>
+                <b>category: </b>{category}
                 <br></br>
                 <button onClick={handleDetailsClick}>show details</button>
-                </li>
-            </ul>
         </div>
     )
     }
@@ -77,33 +75,26 @@ function Interval ({
     )
 
     else if (showDetails===true &&editState===true) return (
-        <div>
-            <ul>
-                <li className="interval">
+        <div className="interval">
                 {`${name} ${duration} ${category}`}
                 <br></br>
                 {`loggged on: ${day}/${month}/${year}`}
                 <hr></hr>
                 <h4>notes:</h4>
-                 <p>{notes}</p>
+                 <p id="notes">{notes}</p>
+                 <br></br>
                 <button onClick={handleDetailsClick}>hide details</button>
                 <br></br>
                 <textarea onChange={handleDetailsInputChange}></textarea>
                 <br></br>
                 <button onClick={setDescriptionChanges}>set changes</button>
-                <br></br>
                 <button onClick={handleEditClick} >cancel changes</button>
-                <br></br>
                 <button onClick={handleDeleteInterval} >delete this interval</button>
-                </li>
-            </ul> 
         </div>
     )
 
     else return (
-        <div>
-            <ul>
-                <li className="interval">
+        <div className="interval">
                 {`${name} ${duration} ${category}`}
                 <br></br>
                 {`loggged on: ${day}/${month}/${year}`}
@@ -112,8 +103,6 @@ function Interval ({
                 <p>{notes}</p>
                 <button onClick={handleDetailsClick}>hide details</button>
                 <button onClick={handleEditClick} >edit</button>
-                </li>
-            </ul> 
         </div>
     )
 

@@ -114,8 +114,7 @@ useEffect(()=>{
           "Content-Type": "application/json",
         },
       }
-      ).then(res=>res.json())
-      .then(data=>console.log(data));
+      ).then(res=>res.json());
 
       fetch("http://localhost:3000/categories")
   .then(res=>res.json())
@@ -125,7 +124,6 @@ useEffect(()=>{
 
   //---------------post details from interval module------
   function postDetails (id){
-      console.log(details);
       fetch(`http://localhost:3000/intervals/${id}`,{
         method: "PATCH",
         headers: {
@@ -151,8 +149,8 @@ useEffect(()=>{
 
   return (
     <div className="App">
-      <h1>Practice Timer</h1>
-      <h2>current interval</h2>
+      <div id="header"><h1>Practice Timer</h1></div>
+      
       <Timer 
         minutes={minutes} 
         seconds={seconds} 

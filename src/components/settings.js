@@ -4,8 +4,6 @@ import React, {useState} from "react";
 function Settings ({handleAddCategory, handleDeleteCategory, newCategory, setNewCategory, categoryArray}){
 
 
-    // let idSearch = categoryArray.filter((index)=>{if(index.name===categoryForDelete){return true}})
-    // console.log(idSearch);
 
     const [categoryForDelete, setCategoryForDelete]=useState(null)
 
@@ -24,9 +22,7 @@ function Settings ({handleAddCategory, handleDeleteCategory, newCategory, setNew
 
     function handleDeleteClick (e){
         let idSearch = categoryArray.find((index)=>index.name===categoryForDelete)
-            console.log(idSearch.id);
             handleDeleteCategory(idSearch.id);
-            console.log(e.target.previousElementSibling[0]);
             e.target.previousElementSibling.value="default";
 
     }
